@@ -11,21 +11,22 @@ Str = int(input('数値を入力:'))
 Lo = 1
 Hi = n
 Mid = (Hi + Lo) // 2
-print(f'上限:{Hi} 下限:{Lo} 中央値:{Mid} 数値:{Str}')
+ print(f'上限:{Hi} 下限:{Lo} 中央:{Mid} 中央値:{Cod[Mid]} 数値:{Str}')
 
 # while Cod[Mid] != Str and Lo <= Hi:
 while Lo <= Hi:  
   if Cod[Mid] == Str:
+    print("データを見つけたよ！")
     break
-  
+    
   if Cod[Mid] > Str:
     Hi = Mid - 1
   else:
     Lo = Mid + 1
   Mid = (Hi + Lo) // 2
-  print(f'上限:{Hi} 下限:{Lo} 中央値:{Mid} 数値:{Str}')
+  print(f'上限:{Hi} 下限:{Lo} 中央:{Mid} 中央値:{Cod[Mid]} 数値:{Str}')
 
-if Hi >= Lo and Cod[Mid] == Str:
+if Hi >= Lo :
     print("該当データあり")
 else:
     print("該当データなし")
